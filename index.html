@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html class="loading">
+    <head>
+        <title>Anchorage Dog Name Game</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <link href="styles.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Life+Savers:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+        <style>
+            .choose_mode #play,
+            .choose_mode #round,
+            .choose_mode #results,
+            .choose_mode #final_results { display: none }
+            .choose_mode #choose_mode { display: block }
+
+            .play #play,
+            .play #round { display: block }
+            .play #results,
+            .play #final_results,
+            .play #choose_mode { display: none }
+
+            .results #play,
+            .results #choose_mode,
+            .results #final_results { display: none }
+            .results #round,
+            .results #results{ display: block }
+
+            .final_results #play,
+            .final_results #round,
+            .final_results #choose_mode,
+            .final_results #results { display: none }
+            .final_results #final_results{ display: block }
+        </style>
+        <!-- <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-56999250-1', 'auto');
+            ga('send', 'pageview');
+        </script> -->
+    </head>
+    <body class="choose_mode">
+
+        <div id="main">
+            <div id="title-block">
+                <h3>Anchorage<br>Edition</h3>
+                <h1>Dog Name <span class="undertuck">Game</span></h1>
+            </div>
+            <div id="loading"><img src="resources/runningDog.gif"> <br />Loading Dogs</div>
+            <noscript>Sorry, the dog name game requires javascript</noscript>
+            <div id="choose_mode">
+                <button class="dog-with-chubby-cheeks" onclick="chooseMode(false)">Easy Mode</button>
+                <button class="angry-bulldog-face"onclick="chooseMode(true)">Hard Mode</button>
+            </div>
+
+            <div id="round">
+                <h2 id="roundNumber"></h2>
+            </div>
+
+            <div id="play">
+                <h2>Which house is worth more</h2>
+                <div id="competitor0" onclick="nameChosen(this.innerText)">
+                    <iframe src="" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <div class="styledesc"><span></span></div>
+                    <div class="bedrooms">Bedrooms: <span></span></div>
+                    <div class="totallivingarea">Square Footage: <span></span></div>
+                    <div class="numhalfbaths">Full Bathrooms: <span></span></div>
+                    <div class="numfullbaths">Half Bathrooms: <span></span></div>
+                </div>
+                <div id="competitor1" onclick="nameChosen(this.innerText)">
+                    <iframe src="" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <div class="styledesc"><span></span></div>
+                    <div class="bedrooms">Bedrooms: <span></span></div>
+                    <div class="totallivingarea">Square Footage: <span></span></div>
+                    <div class="numhalfbaths">Full Bathrooms: <span></span></div>
+                    <div class="numfullbaths">Half Bathrooms: <span></span></div>
+                </div>
+            </div>
+
+            <div id="results">
+                <div id="gameNav" onclick="nextButton()">
+                    <span id="result"></span><span id="next">Next &#187;</span>
+                </div>
+                <div id="counts">
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+
+            <div id="final_results">
+                <h2></h2>
+                <p><a id="twitter-link" target="_blank">Share on Twitter</a></p>
+                <p><a id="facebook-link" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//codeforanchorage.org/dog-name-game/" target="_blank">Share on Facebook</a></p>
+                <p><a id="adoptapet-link" href="http://www.muni.org/Departments/health/Admin/animal_control/Pages/AdoptingaPet.aspx" target="_blank">Adopt a Pet</a></p>
+                <p><a id="register-link" href="http://www.muni.org/Departments/health/Admin/animal_control/Pages/license.aspx" target="_blank">License/Renew your dog to get in the game</a></p>
+                <button class="prize-badge-with-paw-print" onclick="initialize()">Play Again</button>
+            </div>
+
+            <script src="static_data.js"></script>
+            <script src="index.js"></script>
+        </div>
+
+        <div id="footer">Made by <a href="http://codeforanchorage.org">Code for Anchorage</a></div>
+
+    </body>
+</html>

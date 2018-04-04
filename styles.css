@@ -1,0 +1,305 @@
+/*
+    font-family: 'Life Savers', cursive;
+    font-family: 'Abril Fatface', cursive;
+*/
+@font-face {
+  font-family: "Flaticon";
+  src: url("./resources/font/Flaticon.eot");
+  src: url("./resources/font/Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./resources/font/Flaticon.woff") format("woff"),
+       url("./resources/font/Flaticon.ttf") format("truetype"),
+       url("./resources/font/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+html {height: 100%;}
+.loading #choose_mode {
+    opacity: 0.0;
+}
+#choose_mode{
+    transition: opacity 1s;
+}
+#loading {
+    font-family: "Life Savers";
+    /* display:none;*/
+    font-size: 2em;
+    color:#666;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    height: 0em;
+    overflow:hidden;
+    transition: height 1s;
+}
+.loading #loading {
+    display: block;
+    opacity: 1.0;
+    height: 6em;
+}
+#loading img {
+    margin-top:1em;
+}
+body {
+    margin: 0;
+    height: 100%;
+    padding: 0;
+    background-color: #f6f6f6;
+    color: #3a3a3a;
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 15px, white 15px, white 30px);
+    font-family: 'Life Savers';
+}
+#main {
+    max-width:950px;
+    font-size: 2vmin;
+    height: auto;
+    min-height: 100%;
+    margin: auto;
+    background-color:rgba(243, 243, 239, 0.8);
+    padding: 1em 4em 5em 4em;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+    text-align: center;
+    border: 8px double #e1e1e1;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+#footer {
+    text-align: center;
+    width: 100%;
+    line-height: 1em;
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: -2.5em;
+    font-size: 2vmin;
+}
+#title-block {
+    border-top: 1px solid #d5d5d5;
+    border-bottom: 1px solid #d5d5d5;
+    margin-bottom: 2em
+}
+
+h1 {
+    margin-top: 0px;
+    text-align: center;
+    font-size:6em;
+    line-height: .63em;
+    font-family: Abril Fatface;
+    margin-bottom: .4em
+}
+
+h3 {
+    font-family: "Life Savers";
+    display: inline-block;
+    text-align: left;
+    margin-top:.4em;
+    margin-bottom: -.63em;
+    padding-left: 8.7em;
+    font-weight: 700;
+    font-size: 1.73em;
+    color: #3d745c;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+}
+.undertuck {
+    display:block;
+    text-transform: lowercase;
+    font-size: .7em;
+    color: #444;
+    font-weight: 200;
+    padding-left: 1em;
+}
+
+h2 {
+    font-size:1.8em;
+    margin:auto;
+    font-weight:normal;
+}
+
+#counts div {
+    display: inline-block;
+    margin-top:1em;
+    width:40%;
+    font-size: 2.75em;
+    font-family: 'Life Savers';
+    text-transform: capitalize;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+#counts div:before {
+    font-family: Flaticon;
+    font-size: 3em;
+    display: block;
+}
+#round {
+    margin-bottom:2em;
+}
+#roundNumber{
+    position: relative ;
+    top: -.15em;
+    margin-right:1em;
+    display:inline-block;
+}
+#competitor0, #competitor1 {
+    display: inline-block;
+}
+button {
+    border: none;
+    background: none;
+    margin-top:1em;
+    width:40%;
+    font-family: 'Life Savers';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 2.75em;
+    color:inherit;
+    text-transform: capitalize;
+}
+button:hover{
+    color:#3d745c
+}
+button:before {
+    font-family: Flaticon;
+    font-size: 3em;
+    display: block;
+}
+
+.bone {
+    font-size: 1em;
+    color: #dcdcdc;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.bone:before {
+    font-family: Flaticon;
+    font-size: 3em;
+    content: "\f10a";
+}
+.correct {
+    color:#6c7ba5;
+}
+.wrong {
+    color:rgba(161, 157, 138, 0.46);
+}
+
+#result:before {
+    font-family: Flaticon;
+    font-size: 1em;
+    position: relative;
+}
+#result.correct:before {
+    content: "\f11c";
+}
+#result.wrong:before {
+    content: "\f11b";
+}
+#gameNav {
+    font-size:2em;
+}
+#gameNav:hover{
+    color:#3d745c;
+    cursor: pointer;
+}
+#gameNav span {
+    padding: 0 1em;
+}
+#gameNav span:first-of-type{
+    border-right: 1px solid #d5d5d5;
+}
+#final_results {
+    font-size: 1.2em;
+}
+#final_results button {
+    margin-top: 0;
+}
+#final_results a {
+    font-size: 1.5em;
+    color: #3d745c;
+}
+#final_results a:hover {
+    color: #d5d5d5;
+}
+@media screen and (max-width: 550px){
+    button, #counts div {
+        width: 90%;
+        font-size:4em;
+        margin-top:.75em;
+    }
+    #gameNav{ font-size:3.5em }
+    h2 { font-weight: bold; }
+    .play h3,
+    .results h3 {
+        display:none
+    }
+    #round {
+        font-size: .9em;
+        margin-top:.2em;
+    }
+    .play #title-block, .results #title-block {border-top: none; }
+    .play h1, .results h1 {font-size:4em; margin-top:.2em}
+    .play .undertuck,
+    .results .undertuck {
+        display:inline;
+        text-transform: none;
+        font-size: 1em;
+        font-weight: bold;
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-height:500px) {
+
+    #round, #results, #play, #choose_mode {
+        font-size: 1.3em;
+
+    }
+    .play h3, .results h3 {
+        display:none;
+    }
+    h2 { font-weight: bold;}
+    .play #title-block, .results #title-block {border-top: none; }
+    .play h1, .results h1 {font-size:4em; margin-top:.2em}
+    .play .undertuck,
+    .results .undertuck {
+        display:inline;
+        text-transform: none;
+        font-size: 1em;
+        font-weight: bold;
+        padding-left: 0;
+    }
+
+}
+
+.angry-bulldog-face:before { content: "\f100"; }
+.basset-hound-dog-head:before { content: "\f103"; }
+.border-collie-dog-head:before { content: "\f105"; }
+.border-collie-head:before { content: "\f106"; }
+.bulldog-head:before { content: "\f107"; }
+.doberman-dog-head:before { content: "\f109"; }
+.dog-face:before { content: "\f10b"; }
+.dog-face-1:before { content: "\f10c"; }
+.dog-face-2:before { content: "\f10d"; }
+.dog-with-big-and-pointy-ears:before { content: "\f111"; }
+.dog-with-chubby-cheeks:before { content: "\f112"; }
+.dog-with-floppy-ears:before { content: "\f113"; }
+.dog-with-floppy-ears-1:before { content: "\f114"; }
+.dog-with-long-ears:before { content: "\f115"; }
+.dog-with-square-head-shape:before { content: "\f116"; }
+.face-of-a-dog-with-sleepy-eyes:before { content: "\f117"; }
+.funny-dog-head:before { content: "\f119"; }
+.long-haired-dog-head:before { content: "\f11a"; }
+
+
+.angry-dog:before { content: "\f101"; }
+.animal-paw-print:before { content: "\f102"; }
+
+.chewing-bone-for-dog:before { content: "\f108"; }
+.dog-bone:before { content: "\f10a"; }
+.dog-food-bowl:before { content: "\f10e"; }
+.dog-head:before { content: "\f10f"; }
+.dog-kennel:before { content: "\f110"; }
+.face-of-staring-dog:before { content: "\f118"; }
+.pile-of-dung:before { content: "\f11b"; }
+.prize-badge-with-paw-print:before { content: "\f11c"; }
+.tennis-ball:before { content: "\f11d"; }
